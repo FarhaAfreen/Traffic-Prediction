@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goFlow</title>
+
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='resources/trafficcone2.png')}}" />
+ 
+    <script src="{{ url_for('static', filename='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js')}}"></script>
+    <link href="{{ url_for('static', filename='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css')}}" rel='stylesheet' />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!-- beginning -->
+    <!-- the first page -->
+
+
+    <!--  SECTION SECTION ONE ONE -->
+
+
+
+
+    <section class="firstpage">
+
+        <div class="header">
+
+            <div class="name">GoFlow </div>
+
+            <div class="nav-bar">
+                <a href="#about-us" class="nav-bar-item">ABOUT US</a>
+                <a href="#services" class="nav-bar-item">SERVICES</a>
+                <a href="#products" class="nav-bar-item">PRODUCTS</a>
+                <a href="#contact" class="nav-bar-item">CONTACT US</a>
+            </div>
+
+        </div>
+
+
+        <div class="main-container">
+
+            <div class="tagline">
+                DISCOVER THE TRAFFIC OF TOMORROW<br>    
+                <!-- <a href="#map-beg"><button class="try">TRY FOR FREE</button></a> -->
+                <!-- temp deom -->
+                <a href="{{ url_for('map') }}" class="btn color-01">
+                    <span>TRY FOR FREE</span>
+                  </a>
+            </div>
+
+                <div class="videofile">
+                    <div class="vidmask">
+                        <video width="320" height="240" autoplay loop muted>
+                            <source src="{{ url_for('static', filename='resources/main-vid.mp4') }}" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+
+        </div>
+
+
+    </div>
+
+
+
+<!--  SECTION SECTION TWO TWO  -->
+
+<section class="sec-two about-us" id="about-us">
+
+</section>
+
+<!--  SECTION SECTION THREE -->
+
+<section class="sec-three services" id="services">
+
+</section>
+
+<!--  SESCTION  -->
+
+<section class="sec-four products" id="products">
+
+</section>
+
+<!--  SECTION TFOUR -->
+
+<section class="sec-five contact" id="contact">
+
+</section>
+
+
+
+
+
+
+
+
+
+    <!-- <div id="servicespage" class="servicespage">
+
+        <div class="services-container">
+
+            <div class="animationfile">
+                <img style="max-width: 90%;" src="resources/servicespageanimation.gif" alt="booo">
+            </div>
+
+            <div class="services-text">
+                <div class="services-heading">SERVICES</div>
+        </div>
+    </div> -->
+
+
+      <script src=" {{ url_for('static', filename='main.js') }}"></script>
+    
+</body>
+</html>

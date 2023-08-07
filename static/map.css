@@ -1,0 +1,464 @@
+body{
+    margin: 0;    
+    padding: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.header{
+    margin: 0;
+    padding: 0;
+    width: 99.7;
+    height: 4vh;
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    
+}
+
+
+.title_link{
+    text-decoration: none;
+    color: black;
+}
+
+.header_title{
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 50;
+    font-size: 26px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header_title :hover{
+    font-style: italic;
+    font-size: 2px;
+}
+
+.header_sub{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: 18px;
+    flex-grow: 1;
+}
+
+
+.main-util{
+    /* border-top: 1px solid black; */
+    height: 100vh;
+    width: 23.88%;
+    /* margin-top: 1px;   just ignore this later */
+    float: left;     
+    margin: 0;
+}
+
+.sample{
+    display: inline-block;
+    /* border: 1px solid red; */
+    width: 76.1%;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.light-header{
+    background-color: #e9f3fc;
+    /* background-color: #EB455F; */
+}
+
+.light-util{
+    background-color: #F4FAFF;
+    /* background-color: #FCFFE7; */
+}
+
+
+.dark-header{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.dark-util{
+    background-color: black;
+    color: white;
+}
+
+
+/* the toggle dark mode switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    justify-self: right;
+    /* margin-left: 77%; */
+    margin-right: 10px;
+  }
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+input:checked + .slider {
+    background-color: black;
+    border: 1px solid white;
+  }
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  } 
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+  }
+  
+.slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+
+
+
+/*  END OF MAIN STYLING, INSISDE UTILITY BELOW */
+
+
+
+
+/* Anna Road	
+Chintadripet	
+Madras Electricity System	
+Tiruvanmiyur	
+Tidel Park	
+TTTI Taramani	
+Valmiki Nagar	
+Anna Nagar Western Extn	
+Pr. Accountant General	
+Teynampet	
+Chepauk	
+Madras University	
+Tiruvallikkeni	
+Choolaimedu	
+Chennai	
+Flower Bazaar	
+Erukkancheri	
+Lloyds Estate	
+Royapettah	
+Govt Stanley Hospital	
+Triplicane South	
+Mannady (Chennai)	
+Kodungaiyur	
+Mint Building	
+Rv Nagar	
+Gopalapuram (Chennai)	
+MPT AO	
+Sowcarpet	
+Greams Road	
+Old College Buildings	
+Shastri Bhavan	
+Teynampet West	
+Hindi Prachar Sabha	
+Thygarayanagar	
+Thygarayanagar North ND	
+Thygarayanagar South	
+Loyola College	
+Nungambakkam	
+Nungambakkam High Road	
+Mandaveli	
+Mylapore	
+Vivekananda College Madras	
+Adyar (Chennai)	
+Kasturibai Nagar	
+Shastri Nagar (Chennai)	
+Ashoknagar (Chennai)	
+Jafferkhanpet	
+Besantnagar	
+Rajaji Bhavan	
+Ekkaduthangal	
+Guindy Industrial Estate	
+Engineering College (Chennai)	
+Raja Annamalaipuram	
+Ramakrishna Nagar (Chennai)	
+Guindy North	
+Saidapet (Chennai)	
+Indian Institute Of Technology	
+Kalaignar Karunanidhi Nagar	
+Kodambakkam	
+Kotturpuram	
+Koyambedu Wholesale Market Com	
+Virugambakkam	
+Mambalam R.S.	
+West Mambalam	
+Nandanam	
+Rajbhavan (Chennai)	
+Saligramam	
+Vadapalani	
+Velacheri	
+Egmore	
+Egmore ND	
+Aminjikarai	
+Ethiraj Salai	
+Anna Nagar (Chennai)	
+Chetput	
+World University Centre	
+Arumbakkam	
+D G Vaishnav College	
+Aminjikarai	
+Shenoy Nagar	
+Rayapuram	
+Koyambedu	
+Anna Nagar East	
+Agaram	
+Aynavaram	
+G K M Colony	
+Jawahar Nagar (Chennai)	
+Perambur Barracks	
+Puliyanthope	
+Kumaran Nagar	
+Venkatesapuram	
+Flowers Road	
+Icf Colony	
+Kilpauk	
+Kilpauk Medical College	
+Medavakkam Tank Road	
+Perambur	
+Perambur North	
+Sembiam	
+Vepery	
+Washermanpet	
+Washermanpet East	
+Edapalayam	
+Madras Medical College	
+Park Town	
+Fort St George	
+Ripon Buildings	
+High Court Building (Chennai)	
+Tondiarpet	
+Tondiarpet Bazaar	
+Tondiarpet West	
+Vyasar Nagar Colony	
+Vyasarpadi	 */
+
+
+form{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+
+.get-info-section{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top: 40px;
+    color: black;
+    margin-bottom: 1px;
+    padding-bottom: 0px;
+}
+
+.get-source{
+    height: 30px;
+    margin: 10px;
+    width: 88%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+    color: inherit;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: small;
+    margin-bottom: 0;
+}
+
+.get-destination{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.get-date-time{
+    margin-top: 10px;
+}
+
+.get-date{
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+    float: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: small;
+    margin-right: 5px;
+}
+
+.get-time{
+   height: 30px;
+   margin-top: 10px;
+   border-radius: 5px;
+   width: 90px;
+    border: 1px solid black;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: small;   
+}
+
+.get-route{
+    margin: 10px;
+    margin-top: 20px;
+    height: 35px;
+    width: 283px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #2196F3;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: small;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+/*      the         input section ends here ! */
+
+/*  traffic summary below */
+/*  */
+/*           */
+
+
+.traffic-summary-text{
+    padding-top: 0px;
+    margin-top: 0;
+    margin: 30px;
+    padding-left: 30px;
+    /* border-radius: 9px;
+    border: 1px solid black; */
+}
+
+.detail{
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: column-reverse;
+    padding: 0;
+}
+
+.distance-container{
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+}
+.big-numbers{
+    font-weight: 500;
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+}
+.big-stat{
+    margin-top: 18px;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 3px;
+    border: 1px solid black;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.four{
+    margin-top: 8px;
+}
+
+.small-label{
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+
+.traffic-card{
+    background-color: #feae96;
+    background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
+    border-radius: 5px;
+    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 0px; */
+    padding-left: 30px;
+    height: 140px;
+    width: 150px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 0;
+    padding-top: 0px;
+}
+
+.get-route-dark{
+    margin: 10px;
+    margin-top: 20px;
+    height: 35px;
+    width: 283px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+    transition: 0.2ms;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: small;
+    margin-bottom: 20px;
+    background-color: rgb(68, 68, 68);
+}   

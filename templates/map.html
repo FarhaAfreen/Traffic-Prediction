@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFlow</title>
+    
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='resources/trafficcone2.png')}}" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='map.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet">
+
+    <!-- mapbox gl js -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
+</head>
+<body>
+
+    <!-- <div class="header mapPage dark-header" id="header">
+        <a href="/main.html" class="title_link" id="header_words" style="color: white;" ><p class="header_title" id="header_title">GoFlow&nbsp</p></a><p class="header_sub"> your ultimate navigation companian</p>
+
+        <label class="switch">
+            <input type="checkbox" id="toggle" onclick="toggle_dark()" checked>
+            <span class="slider round"></span>
+          </label>
+          
+    </div> -->
+
+    <div class="main-util" id="content">
+
+        <!-- header with toggle button -->
+        <!--          -->
+        <!--  -->
+
+        <div class="header mapPage " id="header">
+            <a href="{{ url_for('index') }}" class="title_link" id="header_words" style="color: black;" ><p class="header_title" id="header_title">GoFlow&nbsp</p></a><p class="header_sub"> your ultimate navigation companian</p>
+    
+            <label class="switch">
+                <input type="checkbox" id="toggle" onclick="toggle_dark()">
+                <span class="slider round"></span>
+              </label>
+        </div> 
+
+
+
+
+        <!-- div for input boxes and find route button -->
+        <!--     -->
+        <!--  -->
+
+        <div class="get-info-section">
+            <form id="myForm" autocomplete="off">
+            <input list="source-reco" type="text" class="get-source" id="get-source" placeholder="Enter source">
+            <datalist id="source-reco">
+                <option>hello</option>
+            </datalist>
+            <!-- <ul id="list-source" class="list-group"> -->
+            </ul>
+            <input type="text" class="get-source get-destination" id="get-destination" placeholder="Enter destination"><br>
+            <ul id="list-destination" class="list-group">
+            </ul>
+
+            <div class="get-date-time">
+                <input type="text" name="day" list="day" autocomplete="off" class="get-date" id="get-date" placeholder="day"/>
+                    <datalist id="day">
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                    </datalist>
+
+                <input type="text" class="get-time" id="get-time" placeholder=" 00:00">
+            </div>
+            
+                <button class="get-route" id="get-route">Get Route</button>
+
+            </form>
+            <hr style="width:100% ">
+        </div>
+
+
+        <div class="traffic-summary-section">
+
+            <div class="traffic-summary-text">
+
+                <div class="detail one">
+
+                    <div class="time time-container">
+                        <span class="big-numbers time" id="time_hack">999</span>
+                        <span class="big-numbers" style="font-weight: 500; font-size: 40px; padding: 0; margin: 0;">&nbsp;hours</span>
+                    </div>
+
+
+
+                    <div class="small-label" id="hacker">Estimated time</div>
+
+                </div>
+
+                <div class="detail two">
+
+                    <div class="distance-container">
+                        <span class="big-numbers distance" id="distance_hack">999</span>
+                        <span class="big-numbers" style="font-weight: 500; font-size: 40px; padding: 0; margin: 0;">&nbsp;km</span>
+                    </div>
+
+                    <div class="small-label">Estimated distance</div>
+
+                </div>
+
+                <div class="detail three" style="margin-bottom: 19px;">
+
+                    <div class="distance-container">
+                        <span class="big-numbers distance" id="speed_hack">999</span>
+                        <span class="big-numbers" style="font-weight: 500; font-size: 40px; padding: 0; margin: 0;">&nbsp;km/hr</span>
+                    </div>
+                    <div class="small-label">Estimated average speed</div>
+                </div>
+
+
+                <div class="detail four">
+                    <div class="distance-container">
+                        <span class="big-stat distance" id="traffic_hack">TRAFFIC-STATUS</span>
+                    </div>
+                </div>
+
+            </div>
+
+<!-- 
+            <div class="traffic-card"><p></p>HIGH TRAFFIC</p></div> -->
+        </div>
+    </div>
+
+    <div id='map' class="sample">
+    </div>
+
+
+
+
+    <!--  MAIN JAVASCRIPT FILE -->
+
+    <script src=" {{ url_for('static', filename='main.js') }}"></script>
+
+
+    
+</body>
+</html>
